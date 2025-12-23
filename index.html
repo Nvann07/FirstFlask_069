@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Warga</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Data</h2>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+
+    <form method="post">
+        <label>Nama</label>
+        <input type="text" name="nama" placeholder="Masukkan nama">
+
+        <label>Warga (Daerah)</label>
+        <input type="text" name="warga" placeholder="Contoh: Bandung">
+
+        <button type="submit">Kirim</button>
+    </form>
+</div>
+
+</body>
+</html>
